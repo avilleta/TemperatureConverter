@@ -15,8 +15,8 @@ public class TemperatureConverterGUI extends Application {
         Button convertButton = new Button();
         convertButton.setText("Convert");
 
-        ComboBox<String> pickScaleFrom = new ComboBox();
-        ComboBox<String> pickScaleTo = new ComboBox();
+        ComboBox<String> pickScaleFrom = new ComboBox<>();
+        ComboBox<String> pickScaleTo = new ComboBox<>();
         pickScaleFrom.getItems().add("Fahrenheit");
         pickScaleFrom.getItems().add("Celsius");
 
@@ -65,7 +65,7 @@ public class TemperatureConverterGUI extends Application {
 
         VBox root = new VBox();
         root.setAlignment(Pos.CENTER);
-        root.SetSpacing(10);
+        root.setSpacing(10);
         root.getChildren().add(input);
         root.getChildren().add(scales);
         root.getChildren().add(convertButton);
@@ -87,5 +87,9 @@ public class TemperatureConverterGUI extends Application {
             converted = value * (9.0 / 5) + 32;
         }
         return converted;
+    }
+    
+    public static void main(String[] args) {
+        launch(args); // Starts JavaFX application
     }
 }
