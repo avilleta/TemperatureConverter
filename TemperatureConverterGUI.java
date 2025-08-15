@@ -62,6 +62,7 @@ public class TemperatureConverterGUI extends Application {
         scales.getChildren().add(pickScaleFrom);
         scales.getChildren().add(to);
         scales.getChildren().add(pickScaleTo);
+        //or use: scales.getChildren().addAll(from, pickScaleFrom, to, PickScaleTo);
 
         VBox root = new VBox();
         root.setAlignment(Pos.CENTER);
@@ -70,6 +71,7 @@ public class TemperatureConverterGUI extends Application {
         root.getChildren().add(scales);
         root.getChildren().add(convertButton);
         root.getChildren().add(result);
+        //or use: root.getChildren().addAll(input, scales, convertButton, result);
 
         Scene scene = new Scene(root, 400, 400);
         stage.setTitle("Temperature Converter");
@@ -88,7 +90,7 @@ public class TemperatureConverterGUI extends Application {
         }
         return converted;
     }
-    
+
     public static void main(String[] args) {
         launch(args); // Starts JavaFX application
     }
